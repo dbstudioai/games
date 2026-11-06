@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#072f3b"><title>Fish Game</title><link rel="stylesheet" href="style.css"></head>
+<body><nav aria-label="Spieleauswahl" style="padding:16px 24px;font:600 14px system-ui"><a href="../" style="color:inherit;text-decoration:underline;text-underline-offset:4px">← Alle Spiele</a></nav>
+<main>
+ <header><a class="brand" href="./"><span class="brand-icon">≋</span><span>FISH <b>GAME</b><small>DAS AQUARIUM-SPIEL</small></span></a><span class="edition">WYNECENTER <i></i> AQUARIUM 03</span></header>
+ <section class="intro"><div><span class="eyebrow">EINE MINUTE UNTER WASSER</span><h1>Auf die Flosse.<br>Fertig. Los.</h1></div><p>Tippe auf die Fische und sammle Punkte.<br>Je schneller sie schwimmen, desto mehr sind sie wert.</p></section>
+ <section class="game-shell" aria-label="Aquarium-Spiel">
+  <div class="hud"><div><span>PUNKTE</span><strong id="score">0</strong></div><div class="time-box"><span>RESTZEIT</span><strong id="time">01:00</strong></div><div><span>DEIN REKORD</span><strong id="best">0</strong></div></div>
+  <div class="tank"><canvas id="aquarium" aria-label="Klicke oder tippe auf die schwimmenden Fische"></canvas><div class="tank-label">SEKTOR 03 <span>•</span> 24 °C</div>
+   <div id="overlay" class="overlay"><section class="panel" id="start-panel"><span class="eyebrow">TAUCHE EIN</span><h2>60 Sekunden.<br>Ein Meer voller Punkte.</h2><p>Fische antippen, kurz winken lassen, weiterfangen.<br>Bereit für deinen nächsten Rekord?</p><button id="start">Runde starten <span>↗</span></button><small>Mit Maus oder Finger spielbar</small></section>
+   <section class="panel hidden" id="end-panel"><span class="eyebrow" id="result-label">RUNDE BEENDET</span><h2>Gut gefischt.</h2><div class="result"><strong id="final-score">0</strong><span>Punkte · <b id="hits">0</b> Treffer</span></div><ol id="highscores"></ol><p id="save-note">Deine besten Runden werden auf diesem Gerät gespeichert.</p><button id="restart">Noch eine Runde <span>↗</span></button></section></div>
+  </div><div class="progress"><i id="progress"></i></div>
+ </section>
+ <footer><div class="legend"><span><i class="dot slow"></i>GEMÜTLICH <b>10</b></span><span><i class="dot medium"></i>FLOTT <b>25</b></span><span><i class="dot fast"></i>BLITZSCHNELL <b>50</b></span></div><p>Ein Fisch zählt wieder, sobald er weiterschwimmt.</p></footer>
+</main><script src="game.js"></script>
+</body></html>
